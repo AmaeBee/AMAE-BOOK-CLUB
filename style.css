@@ -1,0 +1,809 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+:root {
+    --lilac: #b7a0d8;
+    --lilac-dark: #80669f;
+    --lilac-light: #eee7f7;
+    --butter-yellow: #f6e8a6;
+    --cream: #fffdf7;
+    --white: #ffffff;
+    --dark: #29252e;
+    --text: #625b66;
+    --border: #e8e1ed;
+
+    --heading-font: "Playfair Display", Georgia, serif;
+    --body-font: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+    color: var(--lilac-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 span,
+h2 span {
+    color: var(--lilac-dark);
+}
+
+p {
+    color: var(--text);
+}
+
+/* =========================
+   2. ANNOUNCEMENT BAR
+========================= */
+
+.announcement-bar {
+    padding: 9px 15px;
+    background-color: var(--butter-yellow);
+    text-align: center;
+}
+
+.announcement-bar p {
+    color: var(--dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* =========================
+   3. HEADER AND NAVIGATION
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.logo span {
+    color: var(--lilac-dark);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navigation a {
+    color: var(--dark);
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--lilac-dark);
+}
+
+.nav-button {
+    padding: 11px 20px;
+    background-color: var(--lilac);
+    border-radius: 30px;
+    color: var(--dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--butter-yellow);
+}
+
+.menu-toggle {
+    display: none;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/* =========================
+   4. HERO SECTION
+========================= */
+
+.hero {
+    padding: 75px 0 90px;
+    background: linear-gradient(
+        110deg,
+        var(--cream) 55%,
+        var(--lilac-light) 55%
+    );
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-content h1 {
+    margin-bottom: 25px;
+    font-size: clamp(3rem, 5vw, 5rem);
+    letter-spacing: -2px;
+}
+
+.hero-description {
+    max-width: 480px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 23px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background-color: var(--lilac);
+    color: var(--dark);
+}
+
+.button-primary:hover {
+    background-color: var(--butter-yellow);
+}
+
+.button-secondary {
+    border-color: var(--lilac-dark);
+    color: var(--lilac-dark);
+}
+
+.button-secondary:hover {
+    background-color: var(--lilac-light);
+}
+
+.hero-image {
+    position: relative;
+    height: 540px;
+    border-radius: 180px 180px 8px 8px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-caption {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 15px;
+    background-color: rgba(255, 253, 247, 0.92);
+    text-align: center;
+}
+
+.image-caption p {
+    color: var(--dark);
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+}
+
+/* =========================
+   5. BRAND VALUES
+========================= */
+
+.values-section {
+    padding: 35px 0;
+    background-color: var(--butter-yellow);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.value-item {
+    padding: 10px;
+}
+
+.value-number {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--lilac-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.value-item h3 {
+    margin-bottom: 7px;
+    font-size: 1.25rem;
+}
+
+.value-item p {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.about-image {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px 150px 8px 8px;
+}
+
+.about-content h2 {
+    margin-bottom: 25px;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.about-content > p:not(.eyebrow) {
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--lilac-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   7. COLLECTIONS SECTION
+========================= */
+
+.collections-section {
+    background-color: var(--lilac-light);
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.section-heading > p:last-child {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    overflow: hidden;
+    background-color: var(--cream);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image img {
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    margin-bottom: 9px;
+    color: var(--lilac-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.product-info h3 {
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+}
+
+.product-info > p:not(.product-category) {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   8. MANIFESTO SECTION
+========================= */
+
+.manifesto-section {
+    padding: 100px 20px;
+    background-color: var(--lilac);
+    text-align: center;
+}
+
+.manifesto-content {
+    max-width: 800px;
+}
+
+.manifesto-section .eyebrow {
+    color: var(--dark);
+}
+
+.manifesto-content h2 {
+    margin-bottom: 25px;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.manifesto-content > p:not(.eyebrow) {
+    margin-bottom: 30px;
+    color: #39313f;
+}
+
+.button-light {
+    background-color: var(--butter-yellow);
+    color: var(--dark);
+}
+
+.button-light:hover {
+    background-color: var(--cream);
+}
+
+/* =========================
+   9. HAIR RITUAL SECTION
+========================= */
+
+.ritual-container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.ritual-content h2 {
+    margin-bottom: 25px;
+    font-size: clamp(2.5rem, 4vw, 3.7rem);
+}
+
+.ritual-content > p:not(.eyebrow) {
+    margin-bottom: 20px;
+}
+
+.ritual-list {
+    margin: 25px 0 30px;
+    padding-left: 22px;
+}
+
+.ritual-list li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    color: var(--text);
+}
+
+.ritual-list li::marker {
+    color: var(--lilac-dark);
+}
+
+.ritual-image {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 150px 8px 8px 8px;
+}
+
+/* =========================
+   10. CONTACT SECTION
+========================= */
+
+.contact-section {
+    background-color: var(--butter-yellow);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.contact-content h2 {
+    margin-bottom: 22px;
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+}
+
+.contact-content > p:not(.eyebrow) {
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.contact-note {
+    padding: 45px;
+    border: 1px solid rgba(41, 37, 46, 0.2);
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-note-label {
+    margin-bottom: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-note-text {
+    color: var(--dark);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+/* =========================
+   11. FOOTER
+========================= */
+
+.footer {
+    padding: 45px 0 25px;
+    background-color: var(--dark);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    color: var(--cream);
+}
+
+.footer-logo span {
+    color: var(--butter-yellow);
+}
+
+.footer-container > p {
+    color: #d5cdd9;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: var(--cream);
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--butter-yellow);
+}
+
+.copyright {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #514956;
+    width: 100%;
+}
+
+/* =========================
+   12. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .nav-container {
+        gap: 15px;
+    }
+
+    .hero-container {
+        gap: 35px;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    .about-container,
+    .ritual-container {
+        gap: 45px;
+    }
+
+    .about-image,
+    .ritual-image {
+        height: 420px;
+    }
+
+    .products-grid {
+        gap: 18px;
+    }
+
+    .product-image {
+        height: 240px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .nav-container {
+        min-height: 72px;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5%;
+        background-color: var(--cream);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        padding: 13px 5px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navigation a:last-child {
+        border-bottom: none;
+    }
+
+    .hero {
+        padding: 55px 0;
+        background: var(--cream);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+    }
+
+    .hero-image {
+        height: 420px;
+        border-radius: 150px 150px 8px 8px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-item {
+        padding: 5px 0;
+    }
+
+    .about-container,
+    .ritual-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image,
+    .ritual-image {
+        height: 380px;
+    }
+
+    .about-image {
+        border-radius: 8px 120px 8px 8px;
+    }
+
+    .ritual-image {
+        grid-row: 1;
+        border-radius: 120px 8px 8px 8px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-image {
+        height: 330px;
+    }
+
+    .manifesto-section {
+        padding: 75px 20px;
+    }
+
+    .contact-note {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo span {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .about-image,
+    .ritual-image {
+        height: 320px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+
+    .contact-note-text {
+        font-size: 1.7rem;
+    }
+}
