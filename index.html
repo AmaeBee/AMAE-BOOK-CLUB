@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amae Book Club</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <div class="brand">Amae Book Club</div>
+      <nav aria-label="Main">
+        <a href="#current">Now reading</a>
+        <a href="#meeting">Meetings</a>
+        <a href="#next">Suggest a book</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO + SHELF -->
+      <div class="hero">
+        <h1>We read one book a month and argue about the ending.</h1>
+        <p>A friendly club for people who love talking about books. Here is our shelf so far.</p>
+
+        <div class="shelf" aria-label="Books we have read">
+          <div class="spine s1" style="height:18.75rem"><span>Things Fall Apart</span></div>
+          <div class="spine s3" style="height:15.5rem"><span>Americanah</span></div>
+          <div class="spine s4 gold" style="height:13rem"><span>Born a Crime</span></div>
+          <div class="spine s2" style="height:17rem"><span>The Alchemist</span></div>
+          <div class="spine s5" style="height:20rem"><span>Half of a Yellow Sun</span></div>
+          <div class="spine s6" style="height:14.5rem"><span>Purple Hibiscus</span></div>
+          <div class="spine s3" style="height:17.75rem"><span>Girl, Woman, Other</span></div>
+        </div>
+      </div>
+
+      <!-- CURRENT BOOK + NEXT MEETING -->
+      <section id="current">
+        <div class="grid">
+          <div class="now">
+            <h2>This month’s book</h2>
+            <h3>So Long a Letter</h3>
+            <p>Mariama Bâ · 90 pages. Ramatoulaye writes to her friend after her husband’s death, and looks back on marriage, friendship and change.</p>
+            <p>Finish it before the meeting and bring one passage you want to read aloud.</p>
+          </div>
+
+          <div id="meeting" class="meet">
+            <h2>Next meeting</h2>
+            <dl>
+              <dt>When</dt>
+              <dd>Saturday, 15 November, 4:00 pm</dd>
+              <dt>Where</dt>
+              <dd>Café Lumière, Bingerville (or online)</dd>
+              <dt>Bring</dt>
+              <dd>Your copy, a pen, and a snack to share</dd>
+            </dl>
+            <a class="btn" href="mailto:amaebookclub@example.com?subject=I%20will%20come%20to%20the%20meeting">Tell us you’re coming</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUGGEST -->
+      <section id="next">
+        <h2>What should we read next?</h2>
+        <p class="lead">Send us the title and author of a book you would love to discuss.</p>
+        <a class="btn" href="mailto:amaebookclub@example.com?subject=Book%20suggestion">Suggest a book</a>
+      </section>
+    </main>
+
+    <footer>Amae Book Club · Meets monthly · Everyone welcome</footer>
+  </div>
+</body>
+</html>
