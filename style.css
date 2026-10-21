@@ -1,13 +1,16 @@
 /* ---------- Colors (change these to restyle the whole site) ---------- */
 :root {
-  --bg: #F6F4FB;
-  --surface: #FFFFFF;
-  --ink: #1E1B3A;
-  --muted: #5E5A7A;
-  --line: #DAD5EC;
-  --accent: #2F2A8C;
-  --accent-ink: #FFFFFF;
-  --gold: #E8A317;
+  --lilac: #c8a2d8;
+  --lilac-light: #f0e6f5;
+  --lilac-pale: #f8f3fb;
+  --lilac-deep: #805b91;
+  --butter: #f6e7a8;
+  --butter-deep: #d9bd62;
+  --butter-pale: #fcf5d9;
+  --ink: #302837;
+  --muted: #746a78;
+  --ivory: #fffcf6;
+  --white: #ffffff;
 
   /* book spine colors */
   --s1: #2F2A8C;
@@ -19,16 +22,19 @@
 }
 
 /* Dark mode: used automatically when the visitor's device is in dark mode */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --bg: #14122B;
-    --surface: #1F1C3D;
-    --ink: #EDEBFA;
-    --muted: #A9A5C8;
-    --line: #363265;
-    --accent: #F2B632;
-    --accent-ink: #1E1B3A;
-    --gold: #F2B632;
+  --lilac: #c8a2d8;
+  --lilac-light: #f0e6f5;
+  --lilac-pale: #f8f3fb;
+  --lilac-deep: #805b91;
+  --butter: #f6e7a8;
+  --butter-deep: #d9bd62;
+  --butter-pale: #fcf5d9;
+  --ink: #302837;
+  --muted: #746a78;
+  --ivory: #fffcf6;
+  --white: #ffffff;
   }
 }
 
@@ -37,8 +43,8 @@
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--ink);
+  background: var(--lilac);
+  color: var(--butter);
   font: 400 1.0625rem/1.6 "Instrument Sans", system-ui, sans-serif;
 }
 
@@ -50,7 +56,7 @@ h1, h2, h3 {
 }
 
 a { color: var(--accent); }
-a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+a:focus-visible { outline: 3px solid var(--lilac pale); outline-offset: 2px; }
 
 .wrap {
   max-width: 62rem;
